@@ -5,7 +5,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: ps3dev/ps3dev:latest
+    container: ghcr.io/altps3/ps3dev:latest
     steps:
       - uses: actions/checkout@v4
       - name: Build
