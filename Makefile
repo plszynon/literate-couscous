@@ -34,6 +34,7 @@ $(TARGET).self: $(TARGET).elf
 
 pkg: $(TARGET).elf
 	mkdir -p $(PKGDIR)/USRDIR
+	cp ICON0.PNG $(PKGDIR)/ICON0.PNG
 	$(PSL1GHT)/bin/sprxlinker $<
 	$(PSL1GHT)/bin/make_self_npdrm $< $(PKGDIR)/USRDIR/EBOOT.BIN $(CONTENTID)
 	python3 $(PSL1GHT)/bin/sfo.py --title "$(TITLE)" --appid "$(APPID)" -f $(SFOXML) $(PKGDIR)/PARAM.SFO
